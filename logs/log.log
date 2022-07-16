@@ -1,0 +1,21 @@
+2022-07-17 14:43:46,546 INFO [restartedMain] org.linlinjava.litemall.Application [StartupInfoLogger.java : 50] Starting Application on DESKTOP-0I0GKPT with PID 2296 (D:\GitResp\litemall-all\target\classes started by 15 in D:\GitResp)
+2022-07-17 14:43:46,551 DEBUG [restartedMain] org.linlinjava.litemall.Application [StartupInfoLogger.java : 53] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2022-07-17 14:43:46,551 INFO [restartedMain] org.linlinjava.litemall.Application [SpringApplication.java : 679] The following profiles are active: db,core,admin,wx
+2022-07-17 14:43:52,392 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==>  Preparing: select id, key_name, key_value, add_time, update_time, deleted from litemall_system WHERE ( deleted = ? ) 
+2022-07-17 14:43:52,426 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==> Parameters: false(Boolean)
+2022-07-17 14:43:52,464 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] <==      Total: 18
+2022-07-17 14:43:56,534 INFO [scheduling-1] o.l.litemall.admin.job.CouponJob [CouponJob.java : 36] 系统开启任务检查优惠券是否已经过期
+2022-07-17 14:43:56,559 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==>  Preparing: select id, `name`, `desc`, tag, total, discount, `min`, `limit`, `type`, `status`, goods_type, goods_value, code, time_type, `days`, start_time, end_time, add_time, update_time, deleted from litemall_coupon WHERE ( `status` = ? and time_type = ? and end_time < ? and deleted = ? ) 
+2022-07-17 14:43:56,563 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==> Parameters: 0(Short), 1(Short), 2022-07-17 14:43:56.544(Timestamp), false(Boolean)
+2022-07-17 14:43:56,566 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] <==      Total: 0
+2022-07-17 14:43:56,575 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==>  Preparing: select id, user_id, coupon_id, `status`, used_time, start_time, end_time, order_id, add_time, update_time, deleted from litemall_coupon_user WHERE ( `status` = ? and end_time < ? and deleted = ? ) 
+2022-07-17 14:43:56,576 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==> Parameters: 0(Short), 2022-07-17 14:43:56.572(Timestamp), false(Boolean)
+2022-07-17 14:43:56,578 DEBUG [scheduling-1] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] <==      Total: 0
+2022-07-17 14:43:56,579 INFO [scheduling-1] o.l.litemall.admin.job.CouponJob [CouponJob.java : 50] 系统结束任务检查优惠券是否已经过期
+2022-07-17 14:43:56,588 INFO [restartedMain] org.linlinjava.litemall.Application [StartupInfoLogger.java : 59] Started Application in 12.622 seconds (JVM running for 15.403)
+2022-07-17 14:43:56,608 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==>  Preparing: select -- 根据实体类传进的Boolean巨鼎驱虫还是不去重 -- Base_Column_List 调用其他sql id, user_id, order_sn, order_status, aftersale_status, consignee, mobile, address, message, goods_price, freight_price, coupon_price, integral_price, groupon_price, order_price, actual_price, pay_id, pay_time, ship_sn, ship_channel, ship_time, refund_amount, refund_type, refund_content, refund_time, confirm_time, comments, end_time, add_time, update_time, deleted from litemall_order WHERE ( order_status = ? and deleted = ? ) 
+2022-07-17 14:43:56,609 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==> Parameters: 101(Short), false(Boolean)
+2022-07-17 14:43:56,611 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] <==      Total: 0
+2022-07-17 14:43:56,621 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==>  Preparing: select id, goods_id, goods_name, pic_url, discount, discount_member, expire_time, `status`, add_time, update_time, deleted from litemall_groupon_rules WHERE ( `status` = ? and deleted = ? ) 
+2022-07-17 14:43:56,622 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] ==> Parameters: 0(Short), false(Boolean)
+2022-07-17 14:43:56,624 DEBUG [restartedMain] o.l.l.d.d.L.selectByExample [BaseJdbcLogger.java : 159] <==      Total: 0

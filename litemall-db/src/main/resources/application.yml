@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: db
+  messages:
+    encoding: UTF-8
+
+logging:
+  level:
+    org.linlinjava.litemall.db.dao: DEBUG
