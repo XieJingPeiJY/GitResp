@@ -44,6 +44,10 @@ public class WxBrandController {
                        @Sort @RequestParam(defaultValue = "add_time") String sort,
                        @Order @RequestParam(defaultValue = "desc") String order) {
         List<LitemallBrand> brandList = brandService.query(page, limit, sort, order);
+        LitemallBrand litemallBrand = new LitemallBrand();
+        litemallBrand.setDesc("pppppppppppppppppppppppppppjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+
+        brandList.add(litemallBrand);
         return ResponseUtil.okList(brandList);
     }
 
