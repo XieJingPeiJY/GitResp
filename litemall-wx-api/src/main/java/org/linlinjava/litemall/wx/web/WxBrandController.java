@@ -45,7 +45,7 @@ public class WxBrandController {
                        @Order @RequestParam(defaultValue = "desc") String order) {
         List<LitemallBrand> brandList = brandService.query(page, limit, sort, order);
         LitemallBrand litemallBrand = new LitemallBrand();
-        litemallBrand.setDesc("最终测试老7777666666666666666666666666666666666666666666666666666666666666！！xjp！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！");
+        litemallBrand.setDesc("最终测试老77776266666666666666666666666666666666666666666666666666666666666！！xjp！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！");
 
         brandList.add(litemallBrand);
         return ResponseUtil.okList(brandList);
